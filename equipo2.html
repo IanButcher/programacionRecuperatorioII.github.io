@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,7 +50,7 @@
         </div>
         <div class="row">
             <section class="box large-small col-md-12 mb-4">
-                <h2>Equipo tecnico</h2>
+                <h2>Equipo técnico</h2>
                 <table>
                     <tr>
                         <th>Rol</th>
@@ -102,13 +102,13 @@
                 curso: '4to'
             },
             {
-                rol: 'Director de fotografia',
+                rol: 'Director de fotografía',
                 nombre: 'Luciano',
                 curso: '4to'
             },
             {
                 rol: 'Sonidista',
-                nombre: 'Sebastian',
+                nombre: 'Sebastián',
                 curso: '4to'
             },
             {
@@ -134,18 +134,23 @@
         ]
 
         // selecting table
-        const table = document.querySelector('table')
-        for(let person of people){
+        const table = document.querySelector('table');
+       
+        for (let person of people) {
             // creating rows
-            const row = document.createElement('tr')
+            const row = document.createElement('tr');
+            
             // creating td(s)
-            for (let i = 0; i < 3; i++){
-                let td = document.createElement('td')
-                td.innerText(person.i)
-                row.appendChild(td)
+            for (let i = 0; i < 3; i++) {
+                let td = document.createElement('td');
+                // operador condicional ternario 
+                td.innerText = i === 0 ? person.rol : i === 1 ? person.nombre : person.curso;
+                // margen 
+                td.style.padding = '5px';
+                row.appendChild(td);
             }
             // adding the new rows to the table
-            table.appendChild(row)
+            table.appendChild(row);
         }
     </script>
 </body>
