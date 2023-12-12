@@ -34,6 +34,8 @@
                 <p>Nereo Soria</p>
                 <p>Ignacio Rodriguez</p>
             </div>
+        </div>
+        <div class="row">
             <section class="box large-small col-md-7 mb-4">
                 <h2>StoryLine</h2>
                 <p> Cuatro turistas deben quedarse a dormir en un hotel con muy mala pinta. Encuentran una historia de desaparición y son castigados por ello, a excepción de uno, que se encargará de salvarlos.
@@ -44,6 +46,18 @@
                 <p> Teatro: Jesica Daniela Castagnino <br>
                     Club de Arte: Julian Coronel
                 </p>
+            </section>
+        </div>
+        <div class="row">
+            <section class="box large-small col-md-12 mb-4">
+                <h2>Equipo tecnico</h2>
+                <table>
+                    <tr>
+                        <th>Rol</th>
+                        <th>Nombre</th>
+                        <th>Curso</th>
+                    </tr>
+                </table>
             </section>
         </div>
     </main>
@@ -60,6 +74,80 @@
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        const people = [
+            {
+                rol: 'Guionista',
+                nombre: 'Rocio',
+                curso: '4to'
+            },
+            {
+                rol: 'Guionista',
+                nombre: 'Daniela',
+                curso: '4to'
+            },
+            {
+                rol: 'Directora',
+                nombre: 'Ingrid',
+                curso: '4to'
+            },
+            {
+                rol: 'Productora',
+                nombre: 'Francisca',
+                curso: '4to'
+            },
+            {
+                rol: 'Asistente',
+                nombre: 'Agustina',
+                curso: '4to'
+            },
+            {
+                rol: 'Director de fotografia',
+                nombre: 'Luciano',
+                curso: '4to'
+            },
+            {
+                rol: 'Sonidista',
+                nombre: 'Sebastian',
+                curso: '4to'
+            },
+            {
+                rol: 'Iluminadora',
+                nombre: 'Lara',
+                curso: '4to'
+            },
+            {
+                rol: 'Vestuarista',
+                nombre: 'Zahira',
+                curso: '4to'
+            },
+            {
+                rol: 'Asistente de montaje',
+                nombre: 'Gustavo',
+                curso: '4to'
+            },
+            {
+                rol: 'Montajista',
+                nombre: 'Julia',
+                curso: '5to'
+            }
+            ]
+
+        // selecting table
+        const table = document.querySelector('table')
+        for(let person of people){
+            // creating rows
+            const row = document.createElement('tr')
+            // creating td(s)
+            for (let i = 0; i < 3; i++){
+                let td = document.createElement('td')
+                td.innerText(person.i)
+                row.appendChild(td)
+            }
+            // adding the new rows to the table
+            table.appendChild(row)
+        }
+    </script>
 </body>
 </html>
 </body>
